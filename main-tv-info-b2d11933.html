@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 相伴日常</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eef1f0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: #2c3e3a;
+            padding: 2rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .wrapper {
+            max-width: 880px;
+            width: 100%;
+        }
+
+        /* 开场短句卡片 – 浅灰背景上的温柔注目 */
+        .opening {
+            background: #f7f9f8;
+            border: 1px solid #d8dfdb;
+            border-radius: 28px;
+            padding: 2.8rem 2rem 2rem 2rem;
+            margin-bottom: 2.4rem;
+            box-shadow: 0 6px 14px rgba(0, 20, 10, 0.04);
+            text-align: center;
+        }
+
+        .opening p:first-child {
+            font-size: 1.9rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #2b5f4b;
+            margin-bottom: 0.6rem;
+        }
+
+        .opening .sub {
+            font-size: 1rem;
+            color: #4f6b5e;
+            max-width: 480px;
+            margin: 0.2rem auto 0;
+        }
+
+        /* 承接段落 */
+        .bridge {
+            background: #ffffffec;
+            border: 1px solid #d5ddd8;
+            border-radius: 24px;
+            padding: 1.8rem 1.8rem 1.6rem 1.8rem;
+            margin-bottom: 2.2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .bridge p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .bridge p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 特点卡片组 – 三块并列，细边框柔和阴影 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .feature-card {
+            flex: 1 1 200px;
+            background: #ffffff;
+            border: 1px solid #d0dad4;
+            border-radius: 20px;
+            padding: 1.6rem 1.2rem 1.4rem 1.2rem;
+            box-shadow: 0 4px 10px rgba(50, 70, 60, 0.02);
+            transition: box-shadow 0.15s, transform 0.15s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 8px 16px rgba(30, 60, 45, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1f4b3a;
+            margin-bottom: 0.6rem;
+            border-bottom: 1px solid #dce5e0;
+            padding-bottom: 0.3rem;
+        }
+
+        .feature-card p {
+            font-size: 0.93rem;
+            color: #3b5548;
+        }
+
+        /* 温和场景描述 */
+        .scene {
+            background: #f2f6f3;
+            border: 1px solid #d2dbd6;
+            border-radius: 24px;
+            padding: 2rem 1.8rem;
+            margin-bottom: 2.2rem;
+            box-shadow: 0 4px 10px rgba(30, 60, 40, 0.02);
+        }
+
+        .scene h2 {
+            font-weight: 400;
+            font-size: 1.3rem;
+            color: #1f4a3a;
+            margin-bottom: 0.8rem;
+        }
+
+        .scene p {
+            font-size: 0.98rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .scene p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 轻松提示区 */
+        .gentle-note {
+            background: #f9fbfa;
+            border: 1px solid #cdd7d1;
+            border-radius: 24px;
+            padding: 1.6rem 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            font-size: 0.95rem;
+        }
+
+        .gentle-note strong {
+            color: #1d533f;
+            font-weight: 500;
+        }
+
+        /* 温和结尾 */
+        .closing {
+            background: transparent;
+            border-top: 1px solid #d8e0db;
+            padding-top: 1.8rem;
+            margin-top: 0.2rem;
+            text-align: center;
+            color: #3d5e4e;
+            font-size: 0.95rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 540px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .opening p:first-child {
+                font-size: 1.6rem;
+            }
+
+            .feature-grid {
+                flex-direction: column;
+            }
+
+            .feature-card {
+                flex: 1 1 auto;
+            }
+        }
+
+        a {
+            color: #1e694b;
+            text-decoration: none;
+            border-bottom: 1px solid #bcd0c4;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #114232;
+            border-bottom-color: #658d79;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+    <!-- 开场短句 -->
+    <div class="opening">
+        <p>有时，安静地打开一个页面，</p>
+        <p class="sub">就像推开一扇熟悉的门 —— 不为什么大事，只是刚好有空。</p>
+    </div>
+
+    <!-- 承接段落：稳定入口的角度 -->
+    <div class="bridge">
+        <p>在众多网站里，总有一些你愿意留着，不张扬，但每次去都觉得踏实。<a href="https://main-tv-igame.com">爱游戏</a>就是这样一个地方。它不急着告诉你“快来”，而是安静地在那里，等你需要的时候，随时能进。</p>
+        <p>作为一个页面入口，它提供的是稳定的连接和清晰的引导。没有闪烁的弹窗，没有浮夸的承诺，只有你习惯的内容和布局。对于常去的朋友来说，这种“不变”反而成了最好的体验。</p>
+    </div>
+
+    <!-- 特点卡片（三个） -->
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>干净的页面</h3>
+            <p>没有多余的干扰，信息层级清楚。无论使用什么设备，排版都保持一致的舒适感。</p>
+        </div>
+        <div class="feature-card">
+            <h3>轻快的响应</h3>
+            <p>从点击到加载，节奏自然。页面经过合理优化，不会让你在等待中失去耐心。</p>
+        </div>
+        <div class="feature-card">
+            <h3>熟悉的布局</h3>
+            <p>导航、分区、内容结构都遵循直觉。即使隔一段时间回来，你依然能快速找到想去的地方。</p>
+        </div>
+    </div>
+
+    <!-- 场景描述 -->
+    <div class="scene">
+        <h2>一个日常场景</h2>
+        <p>周末下午，泡一杯茶，想看看有什么新鲜的资讯或内容。你打开书签栏，找到那个熟悉的名称，轻轻一点——页面像老朋友一样展开。</p>
+        <p>没有夸张的开场动画，没有催促注册的横幅。你顺着自己习惯的路径，浏览、停留、或者关闭。整个过程安静流畅，像微风穿过窗台。</p>
+    </div>
+
+    <!-- 提示 / 类似FAQ摘要 -->
+    <div class="gentle-note">
+        <strong>一点说明：</strong> 这个页面不收集你的个人信息，也不会自动跳转到其他站点。它只是一个简单的入口——给你一个稳定的起点。如果你发现加载速度或内容有任何异常，可以稍后再试，通常只是网络波动的小插曲。
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="closing">
+        <p>愿意常去的站点，往往不是因为功能多么强大，而是因为它不打扰，刚刚好。</p>
+        <p style="margin-top: 0.4rem; font-size: 0.9rem;">今天，如果你正好想找个地方放松一会儿，不妨去 <a href="https://main-tv-igame.com">爱游戏</a> 看看。</p>
+    </div>
+
+</div>
+</body>
+</html>
